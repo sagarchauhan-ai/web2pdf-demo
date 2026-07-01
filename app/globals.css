@@ -5,22 +5,25 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Carousel transition */
+.carousel-track {
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Dropdown menu animation */
+.dropdown-menu {
+  transform-origin: top;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Accordion transition */
+.accordion-content {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
 }
