@@ -12,7 +12,7 @@ import type { MetadataRoute } from "next";
  *                  this entry to produce output.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://web2pdf-demo.vercel.app/";
 
   return [
     {
